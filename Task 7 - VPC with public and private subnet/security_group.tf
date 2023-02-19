@@ -2,8 +2,8 @@
 resource "aws_security_group" "sanyam-security-group-vpc" {
   name        = "san-security-g"
   description = "security group"
-  vpc_id = aws_vpc.practicing_vpc.id
-   
+  vpc_id      = aws_vpc.practicing_vpc.id
+
   ingress {
     description      = "HTTPS"
     from_port        = 443
@@ -21,7 +21,7 @@ resource "aws_security_group" "sanyam-security-group-vpc" {
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
   }
-  
+
   egress {
     from_port        = 0
     to_port          = 0
@@ -31,8 +31,8 @@ resource "aws_security_group" "sanyam-security-group-vpc" {
   }
 
   tags = {
-    "Name" = "sanyam_security_group"
-    "Owner" = "sanyam.rathore@cloudeq.com"
+    "Name"    = "sanyam_security_group"
+    "Owner"   = "sanyam.rathore@cloudeq.com"
     "Purpose" = "training"
   }
 }

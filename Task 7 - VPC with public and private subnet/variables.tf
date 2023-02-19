@@ -5,15 +5,15 @@ variable "vpc_cidr" {
 }
 
 variable "instances_in_each_subnet" {
-  type = number
-  default = 2
+  type        = number
+  default     = 2
   description = "Number of instances in each subnet.."
 }
 
 variable "ami_id" {
-  type = string
+  type    = string
   default = "ami-0e742cca61fb65051"
-  
+
 }
 
 variable "aws_region" {
