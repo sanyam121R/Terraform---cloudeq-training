@@ -7,7 +7,7 @@
 **/.terraform
 **/files
 **/files/*
-
+**/.terraform.tfstate.*
 
 .git  .gitignore  LICENSE
 .vscode
