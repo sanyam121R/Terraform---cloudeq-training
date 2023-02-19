@@ -1,0 +1,13 @@
+**/terraform.tfstate
+**/.terraform
+**/.terraform.lock.hcl
+
+**/terraform.tfstate.backup
+
+**/.terraform
+**/files
+**/files/*
+
+
+.git  .gitignore  LICENSE
+.vscode
