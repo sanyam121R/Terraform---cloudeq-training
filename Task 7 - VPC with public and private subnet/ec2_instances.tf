@@ -6,6 +6,13 @@ resource "aws_instance" "sanyam-inst-in-public-subnet1" {
   count           = length(var.public_subnet_cidrs)
   subnet_id       = element(aws_subnet.public_subnets[*].id, count.index)
 
+  # for_each = var.common_tags
+  # tags = {
+  #   Name = each.key
+  #   Owner = each.value["owner"]
+  #   Purpose = each.value["purpose"]
+  # }
+
   tags = {
     Name    = "sanyam_ec2_public_${count.index + 1}"
     Owner   = "sanyam.rathore@cloudeq.com"

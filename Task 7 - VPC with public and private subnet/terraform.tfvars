@@ -1,3 +1,14 @@
+common_tags = {
+    "sanyam" = {
+        "owner" = "sanyam.rathore@cloudeq.com"
+        "purpose" = "training"
+    }
+    "sanyam_1" = {
+        "owner" = "sanyam.rathore@cloudeq.com"
+        "purpose" = "training"
+    }
+}
+
 aws_region               = "ap-south-1"
 azs                      = ["ap-south-1a", "ap-south-1b"]
 ami_id                   = "ami-0e742cca61fb65051"

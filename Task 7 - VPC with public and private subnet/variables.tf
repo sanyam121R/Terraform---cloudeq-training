@@ -1,3 +1,13 @@
+variable "common_tags" {
+  type = map(any)
+  default = {
+    "sanyam" = {
+        "owner" = "sanyam.rathore@cloudeq.com"
+        "purpose" = "training"
+    }
+  }
+}
+
 variable "vpc_cidr" {
   type        = string
   description = "VPC cidr subnet range"

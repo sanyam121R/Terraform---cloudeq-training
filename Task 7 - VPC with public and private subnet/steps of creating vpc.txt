@@ -4,24 +4,20 @@ Step 3: Internet Gateway
 Step 4: Create a 2nd Route Table
 Step 5: Associating Public Subnets to the Second Route Table
 
-
-
-First you need to create VPC then plan and apply it 
-
-then we need to write code for subnet and then plan n apply it
-
-then IG and 
-
-
-
-VPC architeture 
-https://spacelift.io/_next/image?url=https%3A%2F%2Fspaceliftio.wpcomstaging.com%2Fwp-content%2Fuploads%2F2022%2F08%2FAWS-VPC.jpg&w=1920&q=75
-
-
 vpc --> subnet --> create and attach primary ENI --> internet gateway and deafult route
 --> create custom security group --> Create Inbound Rule to Allow Remote Access from Any IP Address
 --> 
 
+
+
+
+First you need to create VPC then plan and apply it 
+then we need to write code for subnet and then plan n apply it
+then IG and 
+
+
+VPC architeture 
+https://spacelift.io/_next/image?url=https%3A%2F%2Fspaceliftio.wpcomstaging.com%2Fwp-content%2Fuploads%2F2022%2F08%2FAWS-VPC.jpg&w=1920&q=75
 
 
 
@@ -32,3 +28,19 @@ $ aws ec2 create-vpc—cidr-block 172.16.0.0/16
 
 * Create a new subnet
 $ aws ec2 create-subnet-vpc-id [VPC resource ID] --cidr-block 172.16.100.0/24 --availability-zone us-east-1a 
+
+
+
+DOUBTS
+
+hi sir, i have this that 
+- how can i create multiple instance while i have multiple subnets, 
+  since we can't use for_each and count in the same resource block..
+
+- I have read this blog https://spacelift.io/blog/terraform-aws-vpc and 
+  in this they have created public and private subnets in different azs
+  so when i was creating the ec2 instance i needed the subnets_id and 
+  the number of instances i need to loop through to create them.,
+
+
+https://github.com/sanyam121R/Terraform---cloudeq-training/tree/master/Task%207%20-%20VPC%20with%20public%20and%20private%20subnet
