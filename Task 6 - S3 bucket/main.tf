@@ -17,8 +17,8 @@ resource "aws_instance" "main" {
 
 resource "aws_s3_bucket" "for-aws-tf-files" {
   bucket   = "sanyam-tf-bucket"
+  
   for_each = var.common_tags
-
   tags = {
     Name    = each.key
     Owner   = each.value["owner"]

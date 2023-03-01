@@ -44,3 +44,15 @@ hi sir, i have this that
 
 
 https://github.com/sanyam121R/Terraform---cloudeq-training/tree/master/Task%207%20-%20VPC%20with%20public%20and%20private%20subnet
+
+
+
+module
+    multiple resources
+    backend config
+    output blocks
+    har type ke loops full flexed terraform-aws-modules/terraform-aws-vpc main.tf
+
+output.tf
+variable.tf
+version.tf  == provider.tf

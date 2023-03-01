@@ -1,17 +1,9 @@
 resource "aws_instance" "sanyam-inst-in-public-subnet1" {
-  # count = var.instances_in_each_subnet
   ami             = var.ami_id
   instance_type   = "t2.micro"
   security_groups = ["${aws_security_group.sanyam-security-group-vpc.id}"]
   count           = length(var.public_subnet_cidrs)
   subnet_id       = element(aws_subnet.public_subnets[*].id, count.index)
-
-  # for_each = var.common_tags
-  # tags = {
-  #   Name = each.key
-  #   Owner = each.value["owner"]
-  #   Purpose = each.value["purpose"]
-  # }
 
   tags = {
     Name    = "sanyam_ec2_public_${count.index + 1}"
@@ -30,7 +22,6 @@ resource "aws_instance" "sanyam-inst-in-public-subnet1" {
 
 
 resource "aws_instance" "sanyam-inst-in-private-subnet1" {
-  # count = var.instances_in_each_subnet
   ami             = var.ami_id
   instance_type   = "t2.micro"
   security_groups = ["${aws_security_group.sanyam-security-group-vpc.id}"]

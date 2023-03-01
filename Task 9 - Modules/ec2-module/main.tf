@@ -9,7 +9,6 @@ resource "aws_instance" "sm_ec2" {
         Owner : "sanyam.rathore@cloudeq.com"
         Purpose : "training"
         availability_zone = "ap-south-1a"
-        size              = 20
     }
 
 }
