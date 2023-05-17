@@ -1,5 +1,5 @@
 module "vpc" {
-  source = "../vpc"
+  source = "../module/vpc"
 
   vpc_cidr             = var.vpc_cidr
   azs                  = var.azs
@@ -9,9 +9,8 @@ module "vpc" {
 }
 
 
-
 module "ec2-in-public-subnet" {
-  source = "../ec2"
+  source = "../module/ec2"
 
   ami       = var.ami
   tags      = var.tags
@@ -27,7 +26,7 @@ module "ec2-in-public-subnet" {
 
 
 module "ec2-in-private-subnet" {
-  source = "../ec2"
+  source = "../module/ec2"
 
   ami       = var.ami
   tags      = var.tags
@@ -43,6 +42,6 @@ module "ec2-in-private-subnet" {
 
 
 module "s3" {
-  source = "../s3"
+  source = "../module/s3"
   tags   = var.tags
 }
